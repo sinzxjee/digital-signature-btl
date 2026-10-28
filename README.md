@@ -12,7 +12,7 @@
 
 Trên trang GitHub, chọn **Code → HTTPS** và sao chép URL của repository. Sau đó mở Terminal:
 
-    git clone https://github.com/TEN-TAI-KHOAN/digital-signature-btl.git
+    git clone https://github.com/sinzxjee/digital-signature-btl.git
     cd digital-signature-btl
 
 Thay URL mẫu bằng URL repository thật của nhóm. Nếu repository ở chế độ Private, tài khoản GitHub của người clone phải được thêm vào danh sách Collaborators.
