@@ -7,7 +7,7 @@ class App(tk.Tk):
         super().__init__(); self.title("Ứng dụng chữ ký số – BTL"); self.geometry("800x540"); self.a=tk.StringVar(value=RSA_PSS)
         root=ttk.Frame(self,padding=16); root.pack(fill="both",expand=True)
         ttk.Label(root,text="ỨNG DỤNG CHỮ KÝ SỐ",font=("Segoe UI",18,"bold")).pack()
-        ttk.Label(root,text="Minh họa học tập – không thay thế chữ ký số được CA chứng thực").pack()
+        
         bar=ttk.Frame(root); bar.pack(pady=8)
         ttk.Radiobutton(bar,text="RSA-PSS 3072",variable=self.a,value=RSA_PSS).pack(side="left",padx=12)
         ttk.Radiobutton(bar,text="ECDSA P-256",variable=self.a,value=ECDSA).pack(side="left",padx=12)
