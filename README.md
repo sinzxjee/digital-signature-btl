@@ -6,6 +6,44 @@
 - ECDSA, đường cong P-256 và SHA-256.
 
 > Chương trình phục vụ học tập. Ứng dụng không tích hợp CA, dấu thời gian hoặc thiết bị bảo vệ khóa nên không tạo chữ ký số có giá trị pháp lý.
+## Clone và chạy nhanh
+
+### 1. Clone repository
+
+Trên trang GitHub, chọn **Code → HTTPS** và sao chép URL của repository. Sau đó mở Terminal:
+
+    git clone https://github.com/TEN-TAI-KHOAN/digital-signature-btl.git
+    cd digital-signature-btl
+
+Thay URL mẫu bằng URL repository thật của nhóm. Nếu repository ở chế độ Private, tài khoản GitHub của người clone phải được thêm vào danh sách Collaborators.
+
+### 2. Tạo và kích hoạt môi trường ảo
+
+Với Windows PowerShell:
+
+    python -m venv .venv
+    .venv\Scripts\Activate.ps1
+
+Nếu PowerShell chặn kích hoạt, sử dụng Command Prompt:
+
+    .venv\Scripts\activate.bat
+
+Với macOS hoặc Linux:
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+
+### 3. Cài thư viện và chạy
+
+    python -m pip install --upgrade pip
+    python -m pip install -r requirements.txt
+    python app.py
+
+### 4. Chạy kiểm thử
+
+    python -m unittest -v
+
+Repository không chứa khóa bí mật hoặc khóa mẫu. Sau khi clone, người dùng mở chương trình và tự sinh cặp khóa mới để kiểm thử.
 
 ## Chức năng
 
@@ -102,6 +140,14 @@ Sinh khóa, ký và xác minh. Sau đó đổi số tiền thành 90.000.000 VN�
 - Khi sinh khóa mới, chữ ký cũ chỉ xác minh được bằng khóa công khai cũ.
 - Thư mục keys và các tệp PEM đã được .gitignore loại trừ.
 
+## Thành viên
+
+| Thành viên | Công việc |
+|---|---|
+| Bùi Duy Hưng | Cập nhật theo phân công |
+| Nguyễn Tuấn Anh | Cập nhật theo phân công |
+| Nguyễn Minh Cường | Cập nhật theo phân công |
+| Đỗ Yến Nhi | Cập nhật theo phân công |
 
 ## Tài liệu tham khảo
 
@@ -213,3 +259,5 @@ Kết quả mong đợi lần đầu là chữ ký hợp lệ; sau khi sửa t�
 | TC06 | Tệp ECDSA bị sửa sau khi ký | Không hợp lệ – SHA-256 không khớp |
 
 Nhóm có thể chụp màn hình kết quả của TC01, TC02, TC03 và TC05 để đưa vào chương kiểm thử của báo cáo.
+
+
